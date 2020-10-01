@@ -1,8 +1,20 @@
 <template>
   <div>
-      <place-component name="Bar"></place-component>
-      <place-component name="Irish"></place-component>
-      <place-component name="Garito"></place-component>
+    <span>
+      <span>
+        <place-component name="Bar"></place-component>
+      </span>
+    </span>
+    <span>
+      <span>
+        <place-component name="Irish"></place-component>
+      </span>
+    </span>
+    <span>
+      <span>
+        <place-component name="Garito"></place-component>
+      </span>
+    </span>
   </div>
 </template>
 
@@ -19,5 +31,6 @@ export default {
 <style scoped>
 div {
     border: 3px solid black;
+    width: 50%;
 }
 </style>
