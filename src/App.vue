@@ -1,20 +1,41 @@
 <template>
   <div id="app">
-    <marco-component />
-    <br>
-    <polo-component />
+    <h1>[<span :style="{ color }">o</span>]</h1>
+    <traffic-button :input="!isRed" @output="onOutput" />
   </div>
 </template>
 
 <script>
-import MarcoComponent from './components/MarcoComponent.vue'
-import PoloComponent from './components/PoloComponent.vue'
+import TrafficButton from './components/TrafficButton.vue'
 
 export default {
   name: 'App',
   components: {
-    MarcoComponent,
-    PoloComponent
+    TrafficButton
+  },
+  data() {
+    return {
+      color: 'red'
+    }
+  },
+  computed: {
+    isRed() {
+      return this.color === 'red'
+    },
+  },
+  methods: {
+    onOutput() {
+      this.color = "yellow";
+      setTimeout(() => {
+	this.color = "green";
+      }, 1000);
+      setTimeout(() => {
+	this.color = "yellow";
+      }, 3000);
+      setTimeout(() => {
+	this.color = "red";
+      }, 4000);
+    },
   },
 }
 </script>
