@@ -1,5 +1,5 @@
 <template>
-  <button :disabled="input" @click="$parent.color = 'green'">Click me</button>
+  <button :disabled="false" @click="$parent.color = 'green'">Click me</button>
 </template>
 
 <script>
