@@ -1,24 +1,28 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <marco-component />
+    <br>
+    <polo-component />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MarcoComponent from './components/MarcoComponent.vue'
+import PoloComponent from './components/PoloComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    MarcoComponent,
+    PoloComponent
+  },
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Monaco, monospace;
+  font-size: xx-large;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
